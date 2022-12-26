@@ -1,0 +1,43 @@
+{{ $original := .Page.Resources.GetMatch (.Get 0) }}
+
+{{ $preview := $original.Resize "4000x" }}
+{{ $placeholder := $original.Resize "2x q20" }}
+
+
+{{ if isset $original.Exif.Tags "Orientation" }}
+
+  {{ $orientation := $original.Exif.Tags.Orientation }}
+  {{ if eq $orientation 6 }}
+    {{ $preview = $original.Resize "4000x r270" }}
+  {{ else if (eq $orientation 8) }}
+    {{ $preview = $original.Resize "4000x r90" }}
+  {{ end }}
+{{ end }}
+{{ $alt := .Get 1 }}
+<style type="text/css">*::after {
+   content: none !important;
+}
+.pano{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+</style>
+
+<figure>
+<div class="pano">
+{{ if lt $original.Width 4000 }}
+<div class="placeholder" data-large="{{ $original.Permalink }}">  
+  <img src="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}" class="img-small loaded" alt="{{ $alt }}">
+  <div style="padding-bottom: {{ div (mul $original.Height 100.0) $original.Width }}%;"></div>
+</div>
+{{ else }}
+<a href="{{ $original.RelPermalink }}" target="_blank" title="{{ $alt }}">
+  <div class="placeholder" data-large="{{ $preview.Permalink }}">  
+  <img src="data:image/jpeg;base64,{{ $placeholder.Content | base64Encode }}" class="img-small loaded" alt="{{ $alt }}">
+  <div style="padding-bottom: {{ div (mul $preview.Height 100.0) $preview.Width }}%;"></div>
+</div>
+</a>
+{{ end }}
+</div>
+<figcaption>{{ $alt }}</figcaption>
+</figure>

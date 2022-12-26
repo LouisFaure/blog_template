@@ -1,0 +1,20 @@
+<header class="header">
+  <link rel="alternate"
+      type="application/rss+xml"
+      href="{{.Site.BaseURL }}/index.xml"
+      title="{{ .Site.Title }}">
+
+  <div class="left">
+    <h3>
+      <a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+        {{ .Site.Title }}
+      </a>
+    </h3>
+  </div>
+  <div class="right">
+    {{ if len $.Site.Menus }}
+      {{ partial "menu.html" . }}
+    {{ end }}
+  </div>
+<img src={{ "img/Path.svg" | absURL }} style="width:100%" />
+</header>

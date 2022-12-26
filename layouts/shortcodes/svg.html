@@ -1,0 +1,3 @@
+{{ $original := (.Get 0) }}
+{{ $img :=  (printf "%s%s" "/static/img/" $original )}}
+{{ readFile $img | safeHTML }}

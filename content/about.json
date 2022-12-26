@@ -1,0 +1,36 @@
+{
+  "name": "Hugo Müller-Downing",
+  "location": "Melbourne, Australia",
+  "contact": {
+    "email": "hello@hu.md",
+    "twitter": "https://twitter.com/hugojmd",
+    "github": "https://github.com/hugomd",
+    "telegram": "https://telegram.me/hugomd",
+    "paypal": "https://paypal.me/hugo",
+    "keybase": "https://keybase.io/hugomd",
+    "pleroma": "https://soykaf.org/uoya",
+    "mastodon": "https://melb.social/@hugo"
+  },
+  "friends": {
+    "Aadeeba Mou": "http://aadeeba.com",
+    "Angus Gibson": "http://s.agibson.me",
+    "Cyra Locsin": "http://cyra.locs.in",
+    "Daniel Sykes-Turner": "http://daniel.st",
+    "David Williames": "http://davew.io",
+    "Eric Jiang": "https://ericjiang.dev",
+    "Farmehr Fahour": "http://ffarhour.nz",
+    "Josh Parnham": "http://joshparnham.com",
+    "Renlord Yang": "http://renlord.com",
+    "Robert Koch": "https://me.kochie.io",
+    "Ryan Chew": "http://ryan.moe",
+    "Samuel Clements": "http://samc.io",
+    "Terence Huynh": "http://terencehuynh.com",
+    "Theo Smith": "http://kortex.co.za",
+    "William Holt": "http://will.sx",
+    "Nicholas Whittaker": "https://nicholas.cloud/"
+  },
+  "work": {
+    "company": "Square",
+    "title": "Software Engineer"
+  }
+}

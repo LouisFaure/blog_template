@@ -1,0 +1,61 @@
+languageCode: en-us
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+theme: simple
+paginate: 6
+enableGitInfo: false
+pygmentsUseClasses: true
+relativeURLs: true
+minify: true
+enableEmoji: true
+caches:
+  getjson:
+    dir: ':resourceDir/json'
+    maxAge: -1
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  showMenuItems: 4
+  contentTypeName: post
+  defaultTheme: light
+  showReadingTime: false
+  rssFullText: false
+  replyViaEmail: true
+  replyEmail: somemail@lemail.com
+  hideReadMore: false
+outputs:
+  section:
+  - json
+  - html
+languages:
+  en:
+    languageName: English
+    weight: 1
+    title: Ben & Emma's Travel Journal
+    description: >-
+      Here is the journal of our adventures.
+    keywords: ''
+    menuMore: Show more
+    writtenBy: Written by
+    readMore: Continue reading
+    readOtherPosts: Read other adventures
+    newerPosts: ←  Newer adventures
+    olderPosts: Older adventures →
+    lastModDisplay: ''
+    dateFormatSingle: Mon Jan 2 2006
+    dateFormatList: Mon Jan 2 2006
+    params:
+      showMenuItems: 2
+      logo:
+        logoHomeLink: /
+    menu:
+      main:
+        - identifier: about
+          name: About
+          url: /about/
+        - identifier: archive
+          name: Archive
+          url: /archive/
+

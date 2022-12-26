@@ -1,0 +1,14 @@
+<script type="text/javascript">
+  var elems = document.getElementsByTagName('div'), i;
+      for (i in elems) {
+          if(elems[i].className != null && (' '+elems[i].className+' ').indexOf(' placeholder ') > -1) {
+            var imgLarge = new Image();
+            imgLarge.src = elems[i].getAttribute("data-large")
+            imgLarge.alt = elems[i].getAttribute("data-alt")
+            imgLarge.onload = function () {
+              this.classList.add('loaded');
+            };
+           elems[i].appendChild(imgLarge);
+          }
+      }
+</script>

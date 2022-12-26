@@ -1,0 +1,9 @@
+{{ $original := (.Get "src") }}
+{{ $audio :=  (printf "%s%s" "/audio/" $original )}}
+
+<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
+  <audio controls preload="{{ .Get "preload" | default "metadata" }}" style="width: 100%;">
+    {{ with .Get "src" }}<source src="{{ $audio }}" type="audio/mpeg">{{ end }}
+  </audio>
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
